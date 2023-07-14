@@ -13,7 +13,7 @@ export const createSesion = async (req, res) => {
                         description: 'Data Packet for Movistar'
                     },
                     currency: 'usd',
-                    unit_amount: 2000
+                    unit_amount: 150
                 },
                 quantity: 10
             },

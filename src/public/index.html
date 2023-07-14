@@ -115,7 +115,7 @@
               <li>Phone and email support</li>
               <li>Help center access</li>
             </ul>
-            <button id="checkout" type="button" class="w-100 btn btn-lg btn-primary">Make a purchase</button>
+            <button id="checkout2" type="button" class="w-100 btn btn-lg btn-primary">Make a purchase</button>
           </div>
         </div>
       </div>
@@ -219,7 +219,13 @@
 
   <script>
     const button = document.getElementById('checkout');
+    const button2 = document.getElementById('checkout2');
     button.addEventListener('click',async ()=>{
+      const res = await fetch('/create-session',{method:'POST'})
+      const data = await res.json()
+      window.location.href = data.url
+    });
+    button2.addEventListener('click',async ()=>{
       const res = await fetch('/create-session',{method:'POST'})
       const data = await res.json()
       window.location.href = data.url
